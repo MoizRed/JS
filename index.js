@@ -9,7 +9,7 @@
 8 MATH IS DONE!
 9 RANDOM NUMBER GENERATOR DONE! EASY
 10 IF STATEMENT  + SWITCH  DONE!
-11 
+11 TRENARY OPERATOR DONE!
 12
 13
 14
@@ -81,20 +81,3 @@
 80
 
 */
-
-let text = document.getElementById("count")
-let mycheckbox = document.getElementById("mycheckbox")
-
-let button = document.getElementById("mybutton")
-
-button.onclick = function(){
-
-    console.log(mycheckbox) 
-
-    mycheckbox.checked? text.textContent = "YES okey bro lol" : text.textContent = "NO , NOT OKEY BRO"
-
-    
-
-
-}
-
