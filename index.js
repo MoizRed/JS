@@ -1,4 +1,4 @@
-/* 
+/* https://www.youtube.com/watch?v=Coyy79wRz_s&list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv&index=60
 1 intro DONE!
 2 VARs DONE!
 3 ARITHMETICS DONE!
@@ -37,7 +37,7 @@
 36
 37
 38
-39
+39 THIS DONE !
 40
 41
 42
@@ -58,7 +58,7 @@
 57
 58
 59
-60 ASYNCHRONOUS JS
+60 ASYNCHRONOUS JS DONE!
 61
 62
 63
@@ -82,43 +82,19 @@
 
 */
 
-//calling functions
-
-
-let button = document.getElementById("mybutton")
 
 
 
-button.onclick = function(){
 
-    fun1(fun2)
+const person1 ={
 
-
-}
-
-
-
-function fun1(callback) {
-
-setTimeout(() => {
-    console.log('hello'); //fetching API
-    callback();
-}, 3000);
+    name : "abdou",
+    age : "24",
+    sayhello : function(){console.log(`Hi im ${this.name} im ${this.age}`)}
 
 
 }
 
 
 
-function fun2(){
-
-console.log("bye")
-
-
-}
-
-
-
-
-
-
+person1.sayhello()
