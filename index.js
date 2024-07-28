@@ -29,7 +29,7 @@
 28
 29
 30
-31 CALLS BACKS 
+31 CALLS BACKS DONE!
 32
 33
 34
@@ -82,28 +82,43 @@
 
 */
 
+//calling functions
 
-//CALLBACKS
+
+let button = document.getElementById("mybutton")
 
 
-const button = document.getElementById("mybutton")
 
 button.onclick = function(){
 
-hello(goodbye)
+    fun1(fun2)
 
 
 }
 
-function hello(callback){
-    console.log("hello")
+
+
+function fun1(callback) {
+
+setTimeout(() => {
+    console.log('hello'); //fetching API
     callback();
+}, 3000);
+
 
 }
 
 
 
-function goodbye(){
+function fun2(){
 
-    console.log("bye.")
+console.log("bye")
+
+
 }
+
+
+
+
+
+
