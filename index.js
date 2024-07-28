@@ -10,7 +10,7 @@
 9 RANDOM NUMBER GENERATOR DONE! EASY
 10 IF STATEMENT  + SWITCH  DONE!
 11 TRENARY OPERATOR DONE!
-12
+12 SWITCH DONE!
 13
 14
 15
@@ -29,7 +29,7 @@
 28
 29
 30
-31
+31 CALLS BACKS 
 32
 33
 34
@@ -58,7 +58,7 @@
 57
 58
 59
-60
+60 ASYNCHRONOUS JS
 61
 62
 63
@@ -73,11 +73,37 @@
 72
 73
 74
-75
-76
+75 PROMISES 
+76 ASYNC/AWAIT 
 77
 78
 79
 80
 
 */
+
+
+//CALLBACKS
+
+
+const button = document.getElementById("mybutton")
+
+button.onclick = function(){
+
+hello(goodbye)
+
+
+}
+
+function hello(callback){
+    console.log("hello")
+    callback();
+
+}
+
+
+
+function goodbye(){
+
+    console.log("bye.")
+}
