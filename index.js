@@ -74,10 +74,31 @@
 73
 74 CALLBACK HELL DONE! [reminder : function to reference it and function() to evoke]
 75 PROMISES  DONE! (understood 50:50)
-76 ASYNC/AWAIT 
+76 ASYNC/AWAIT ! (understood better than async awaite )
 77
 78
 79
 80
 
 */
+
+let data ;
+
+async function fetchdata(callback){
+
+    const response =  await fetch('https://freetestapi.com/api/v1/animals/3')
+    data = await response.json()
+    console.log(data)
+    callback()
+
+}
+
+
+fetchdata(updatedom)
+
+
+
+
+function updatedom(){
+    document.getElementById("count").textContent = data.name
+    }
