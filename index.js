@@ -82,23 +82,35 @@
 
 */
 
-let data ;
 
-async function fetchdata(callback){
+let data ; 
 
-    const response =  await fetch('https://freetestapi.com/api/v1/animals/3')
-    data = await response.json()
+
+let x ; 
+let btn = document.getElementById("mybutton")
+
+async function fetchdata(x , callback){
+
+     res = await fetch(`https://freetestapi.com/api/v1/animals/${x}`)
+     data = await res.json()
     console.log(data)
     callback()
-
 }
 
 
-fetchdata(updatedom)
-
-
-
-
 function updatedom(){
-    document.getElementById("count").textContent = data.name
+    document.getElementById("count").textContent = data.name;
+    document.getElementById("des").textContent = data.description;
     }
+
+
+
+
+   
+    btn.onclick = ()=>{
+        x = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
+         console.log(x)
+         fetchdata(x,updatedom)
+    }
+
+
