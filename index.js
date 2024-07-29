@@ -72,8 +72,8 @@
 71
 72
 73
-74
-75 PROMISES 
+74 CALLBACK HELL DONE! [reminder : function to reference it and function() to evoke]
+75 PROMISES  DONE! (understood 50:50)
 76 ASYNC/AWAIT 
 77
 78
@@ -81,20 +81,3 @@
 80
 
 */
-
-
-
-
-
-const person1 ={
-
-    name : "abdou",
-    age : "24",
-    sayhello : function(){console.log(`Hi im ${this.name} im ${this.age}`)}
-
-
-}
-
-
-
-person1.sayhello()
