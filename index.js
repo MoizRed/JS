@@ -9,21 +9,21 @@
 8 MATH IS DONE!
 9 RANDOM NUMBER GENERATOR DONE! EASY
 10 IF STATEMENT  + SWITCH  DONE!
-11 TRENARY OPERATOR DONE!
-12 SWITCH DONE!
-13
-14
-15
-16
-17
-18
+11 Checked property DONE ! 
+12 TRENARY OPERATOR DONE!
+13 SWITCH DONE!
+14 STRING METHODS DONE!
+15 STRING SLICING DONE!
+16 METHOD CHAINING DONE!
+17 LOGICAL OPERATORS DONE!
+18 STRICT EQUALITY OPERATORS DONE! === compare type and value , == compare only value , !== 
 19
 20
 21
 22
 23
 24
-25
+25 
 26
 27
 28
@@ -74,7 +74,7 @@
 73
 74 CALLBACK HELL DONE! [reminder : function to reference it and function() to evoke]
 75 PROMISES  DONE! (understood 50:50)
-76 ASYNC/AWAIT ! (understood better than async awaite )
+76 ASYNC/AWAIT ! (understood better than PROMISES)
 77
 78
 79
@@ -83,34 +83,20 @@
 */
 
 
-let data ; 
+let stringo = "hello";
+
+let count = 0;
 
 
-let x ; 
-let btn = document.getElementById("mybutton")
+const display = document.getElementById("count");
+if (stringo !== count){
 
-async function fetchdata(x , callback){
+    display.innerHTML = "VALID"
 
-     res = await fetch(`https://freetestapi.com/api/v1/animals/${x}`)
-     data = await res.json()
-    console.log(data)
-    callback()
+
+}else{
+
+
+display.innerHTML = "UNVALID"
+
 }
-
-
-function updatedom(){
-    document.getElementById("count").textContent = data.name;
-    document.getElementById("des").textContent = data.description;
-    }
-
-
-
-
-   
-    btn.onclick = ()=>{
-        x = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
-         console.log(x)
-         fetchdata(x,updatedom)
-    }
-
-
