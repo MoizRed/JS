@@ -17,9 +17,9 @@
 16 METHOD CHAINING DONE!
 17 LOGICAL OPERATORS DONE!
 18 STRICT EQUALITY OPERATORS DONE! === compare type and value , == compare only value , !== 
-19
-20
-21
+19 CONDITIONS DONE! "continue skips current iteration"
+20 NUMBER GUESSING GAME DONE!
+21  
 22
 23
 24
@@ -82,21 +82,54 @@
 
 */
 
-
-let stringo = "hello";
-
-let count = 0;
+let min = 1
+let max = 10
 
 
-const display = document.getElementById("count");
-if (stringo !== count){
 
-    display.innerHTML = "VALID"
+
+
+
+
+
+
+while(true){
+
+const PCNum = Math.floor((Math.random() * 50 + 1) - 1 )
+
+console.log(PCNum)
+
+    let USRNum = window.prompt("guess a number");
+    
+    USRNum = Number(USRNum)
+
+
+    console.log(typeof USRNum)
+  
+
+if ( (typeof USRNum) !== "number") {
+
+    window.alert("invalid input")
+     
+}else{
+
+window.alert("VALID INPUT ")
+
+
+if (USRNum === PCNum ) {
+
+    window.alert("CORRECT!")
 
 
 }else{
 
 
-display.innerHTML = "UNVALID"
+    window.alert("OPS , THAT'S THE WRONG NUMBER!")
+
+
+}
+
+}
+
 
 }
