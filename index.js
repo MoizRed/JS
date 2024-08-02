@@ -10,7 +10,7 @@
 9 RANDOM NUMBER GENERATOR DONE! EASY
 10 IF STATEMENT  + SWITCH  DONE!
 11 Checked property DONE ! 
-12 TRENARY OPERATOR DONE!
+12 TRINARY OPERATOR DONE!
 13 SWITCH DONE!
 14 STRING METHODS DONE!
 15 STRING SLICING DONE!
@@ -95,11 +95,11 @@ let max = 10
 
 while(true){
 
-const PCNum = Math.floor((Math.random() * 50 + 1) - 1 )
+const PCNum = Math.floor((Math.random() * 10 + 1) - 1 )
 
 console.log(PCNum)
 
-    let USRNum = window.prompt("guess a number");
+    let USRNum = window.prompt("guess a number between 1 and 10 ");
     
     USRNum = Number(USRNum)
 
@@ -107,7 +107,7 @@ console.log(PCNum)
     console.log(typeof USRNum)
   
 
-if ( (typeof USRNum) !== "number") {
+if ( isNaN(USRNum) ) { 
 
     window.alert("invalid input")
      
@@ -133,3 +133,7 @@ if (USRNum === PCNum ) {
 
 
 }
+
+
+
+ 
