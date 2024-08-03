@@ -87,6 +87,13 @@
 //destructuring is taking properties of an object and assigning them to variables
 //destructing works same methods 
 
+
+//DESTRUCTURING IN FUNCTIONS PARAMETERS EAAAAAAAAAAAAAAAAAAASY
+function displayperson({firstName,lastName,age,eyeColor = "nothing"}) //destructuring happens here lmao
+{
+console.log(`name : ${firstName} ${lastName} age : ${age} eyeColor : ${eyeColor}`);
+}
+
 const person1 = {
         firstName: "John",
         lastName: "Doe",
@@ -101,6 +108,8 @@ const person1 = {
     };
     
     
-    const {firstName,lastName,age,eyeColor="brown"} = person2; //all of these are  variables are assigned from the properties of person2
 
-    console.log(eyeColor)
+    displayperson(person2);
+
+
+  
