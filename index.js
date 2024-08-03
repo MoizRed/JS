@@ -26,7 +26,7 @@
 25 ARRAYS DONE! 
 26 2D ARRAYS DONE!
 27 SPREAD OPERATOR DONE! (...numbers) spreads the array / unpack object or array content
-28
+28 REST PARAMETER DONE! BUNDLES ELEMENT INTO ONE ARRAY!!!!
 29
 30
 31 CALLS BACKS DONE!
@@ -83,45 +83,80 @@
 */
 
 
+// password generator
+
+let random = ""
+let randomstring = ""
+function generatepassword(pwlength , includeUppercase, includeLowercase, includeNumbers, includeSymbols){
+    
+     const lowercase = "abcdefghijklmnopqrstuvwxyz";
+     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+     const Numbers = "0123456789";
+     const Symbols = "!@#$%^&*()";
+
+    let allowedchart = "";
+    let password = "";
+
+    allowedchart += includeLowercase ? lowercase : "";
+    allowedchart += includeUppercase ? uppercase : "";
+    allowedchart += includeNumbers ? Numbers : "";
+    allowedchart += includeSymbols ? Symbols : "";
 
 
-//REST PARAMETER ACCEPT ANY NUMBER OF PARAMETERS IN A FUNCTION
-
-let food1 = "pizza"
-let food2 = "sushi"
-let food3 = "burgers"
-let food4 = "pasta"
-let food5 = "ice cream"
+    if (pwlength <=0){
 
 
-function food(...food){ //REST COLLECT THEM
+        return ("password length must be greater than 0");
 
-    console.log(...food); //UNPACK THEM
+    }
+    if(allowedchart.length === 0)  {
+
+        return("atleast one option needs to be selected lol")
+
+    }
+
+
+    for(let i = 0; i < pwlength; i++){
+
+
+         random = Math.floor(Math.random()* allowedchart.length);
+        console.log(random)
+        
+        password += allowedchart[random]
+
+        randomstring += random
+
+    }
+
+    console.log(randomstring)
 
 
 
+    return password;
 }
- 
 
 
-food(food1,food2,food3,food4,food5)
 
 
-//EXAMPLE 2
+
+const pwlength = 8;
+const includeUppercase = true;
+const includeLowercase = true;
+const  includeNumbers = true;
+const includeSymbols = true ;
 
 
-function sum (...numbers){
 
-    let result = 0;
+const  passowrd = generatepassword(
+    pwlength,
+      includeUppercase, 
+     includeLowercase, 
+     includeNumbers,
+      includeSymbols)
 
-
-for(let number of numbers){
-
-    result += number
-
-}
-return result
-}
+console.log(passowrd)
 
 
-console.log(sum(1,32,0))
+
+let text = "hello world"
+
