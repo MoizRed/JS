@@ -27,8 +27,8 @@
 26 2D ARRAYS DONE!
 27 SPREAD OPERATOR DONE! (...numbers) spreads the array / unpack object or array content
 28 REST PARAMETER DONE! BUNDLES ELEMENT INTO ONE ARRAY!!!!
-29
-30
+29 // you can select index of string by doing text[index] exp : text = "hello" text[3] = l
+30 RANDOM PASSWORD GENERATOR DONE!
 31 CALLS BACKS DONE!
 32
 33
@@ -83,80 +83,24 @@
 */
 
 
-// password generator
 
-let random = ""
-let randomstring = ""
-function generatepassword(pwlength , includeUppercase, includeLowercase, includeNumbers, includeSymbols){
+//destructuring is taking properties of an object and assigning them to variables
+//destructing works same methods 
+
+const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
     
-     const lowercase = "abcdefghijklmnopqrstuvwxyz";
-     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-     const Numbers = "0123456789";
-     const Symbols = "!@#$%^&*()";
+    const person2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+        age: 30,
+    };
+    
+    
+    const {firstName,lastName,age,eyeColor="brown"} = person2; //all of these are  variables are assigned from the properties of person2
 
-    let allowedchart = "";
-    let password = "";
-
-    allowedchart += includeLowercase ? lowercase : "";
-    allowedchart += includeUppercase ? uppercase : "";
-    allowedchart += includeNumbers ? Numbers : "";
-    allowedchart += includeSymbols ? Symbols : "";
-
-
-    if (pwlength <=0){
-
-
-        return ("password length must be greater than 0");
-
-    }
-    if(allowedchart.length === 0)  {
-
-        return("atleast one option needs to be selected lol")
-
-    }
-
-
-    for(let i = 0; i < pwlength; i++){
-
-
-         random = Math.floor(Math.random()* allowedchart.length);
-        console.log(random)
-        
-        password += allowedchart[random]
-
-        randomstring += random
-
-    }
-
-    console.log(randomstring)
-
-
-
-    return password;
-}
-
-
-
-
-
-const pwlength = 8;
-const includeUppercase = true;
-const includeLowercase = true;
-const  includeNumbers = true;
-const includeSymbols = true ;
-
-
-
-const  passowrd = generatepassword(
-    pwlength,
-      includeUppercase, 
-     includeLowercase, 
-     includeNumbers,
-      includeSymbols)
-
-console.log(passowrd)
-
-
-
-let text = "hello world"
-
+    console.log(eyeColor)
