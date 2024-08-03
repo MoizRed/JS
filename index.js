@@ -9,7 +9,7 @@
 8 MATH IS DONE!
 9 RANDOM NUMBER GENERATOR DONE! EASY
 10 IF STATEMENT  + SWITCH  DONE!
-11 Checked property DONE ! 
+11 CHECKED PROPERTY DONE !
 12 TRINARY OPERATOR DONE!
 13 SWITCH DONE!
 14 STRING METHODS DONE!
@@ -17,15 +17,15 @@
 16 METHOD CHAINING DONE!
 17 LOGICAL OPERATORS DONE!
 18 STRICT EQUALITY OPERATORS DONE! === compare type and value , == compare only value , !== 
-19 CONDITIONS DONE! "continue skips current iteration"
+19 CONDITIONS DONE! "continue skips current iteration  i ==  13 skips logging 13 "
 20 NUMBER GUESSING GAME DONE!
-21  
-22
-23
-24
-25 
-26
-27
+21 WHILE LOOP DONE!
+22 JS FUNCTIONS DONE!
+23 VARIABLE SCOPE DONE!
+24 //
+25 ARRAYS DONE! 
+26 2D ARRAYS DONE!
+27  
 28
 29
 30
@@ -82,58 +82,13 @@
 
 */
 
-let min = 1
-let max = 10
+let fruit = ["apple","banana","orange","grape"]
+let numbers =  [1,2,3,4,5,6,7,8,9,10];
 
 
+let max = Math.max(...numbers);
+
+console.log(...numbers, ...fruit)
 
 
-
-
-
-
-
-while(true){
-
-const PCNum = Math.floor((Math.random() * 10 + 1) - 1 )
-
-console.log(PCNum)
-
-    let USRNum = window.prompt("guess a number between 1 and 10 ");
-    
-    USRNum = Number(USRNum)
-
-
-    console.log(typeof USRNum)
-  
-
-if ( isNaN(USRNum) ) { 
-
-    window.alert("invalid input")
-     
-}else{
-
-window.alert("VALID INPUT ")
-
-
-if (USRNum === PCNum ) {
-
-    window.alert("CORRECT!")
-
-
-}else{
-
-
-    window.alert("OPS , THAT'S THE WRONG NUMBER!")
-
-
-}
-
-}
-
-
-}
-
-
-
- 
+console.log(max)
