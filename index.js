@@ -25,7 +25,7 @@
 24 //
 25 ARRAYS DONE! 
 26 2D ARRAYS DONE!
-27  
+27 SPREAD OPERATOR DONE! (...numbers) spreads the array / unpack object or array content
 28
 29
 30
@@ -86,9 +86,15 @@ let fruit = ["apple","banana","orange","grape"]
 let numbers =  [1,2,3,4,5,6,7,8,9,10];
 
 
+
+
 let max = Math.max(...numbers);
-
-console.log(...numbers, ...fruit)
-
-
+console.log(...numbers, ...fruit.join("-"))
 console.log(max)
+console.log(numbers)
+
+
+let mixer = [...numbers, ...fruit , "hello" , "world"];
+console.log(...mixer)
+
+
