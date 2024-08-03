@@ -82,19 +82,46 @@
 
 */
 
-let fruit = ["apple","banana","orange","grape"]
-let numbers =  [1,2,3,4,5,6,7,8,9,10];
 
 
 
+//REST PARAMETER ACCEPT ANY NUMBER OF PARAMETERS IN A FUNCTION
 
-let max = Math.max(...numbers);
-console.log(...numbers, ...fruit.join("-"))
-console.log(max)
-console.log(numbers)
-
-
-let mixer = [...numbers, ...fruit , "hello" , "world"];
-console.log(...mixer)
+let food1 = "pizza"
+let food2 = "sushi"
+let food3 = "burgers"
+let food4 = "pasta"
+let food5 = "ice cream"
 
 
+function food(...food){ //REST COLLECT THEM
+
+    console.log(...food); //UNPACK THEM
+
+
+
+}
+ 
+
+
+food(food1,food2,food3,food4,food5)
+
+
+//EXAMPLE 2
+
+
+function sum (...numbers){
+
+    let result = 0;
+
+
+for(let number of numbers){
+
+    result += number
+
+}
+return result
+}
+
+
+console.log(sum(1,32,0))
