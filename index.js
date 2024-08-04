@@ -109,7 +109,7 @@ const person1 = {
     
     
 
-    displayperson(person2);
+    displayperson(person1);
 
 
   
