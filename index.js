@@ -30,7 +30,7 @@
 29 // you can select index of string by doing text[index] exp : text = "hello" text[3] = l
 30 RANDOM PASSWORD GENERATOR DONE!
 31 CALLS BACKS DONE!
-32
+32 FOREACH DONE!
 33
 34
 35
@@ -82,34 +82,134 @@
 
 */
 
+// forEach() = method used to iterate over the elements 
+
+//                     of an array and apply a specified function (callback)
+
+//                     to each element
 
 
-//destructuring is taking properties of an object and assigning them to variables
-//destructing works same methods 
+
+//                     array.forEach(callback)
+
+//                     element, index, array are provided
 
 
-//DESTRUCTURING IN FUNCTIONS PARAMETERS EAAAAAAAAAAAAAAAAAAASY
-function displayperson({firstName,lastName,age,eyeColor = "nothing"}) //destructuring happens here lmao
-{
-console.log(`name : ${firstName} ${lastName} age : ${age} eyeColor : ${eyeColor}`);
+
+
+
+// forEach() = method used to iterate over the elements 
+
+//                     of an array and apply a specified function (callback)
+
+//                     to each element
+
+
+
+//                     array.forEach(callback)
+
+//                     element, index, array are provided
+
+
+
+// -------------- EXAMPLE 1 --------------
+
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+
+
+numbers.forEach(cube);
+
+numbers.forEach(display);
+
+
+
+function double(element, index, array){
+
+    array[index] = element * 2;
+
 }
 
-const person1 = {
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
-    };
-    
-    const person2 = {
-        firstName: "Mary",
-        lastName: "Doe",
-        age: 30,
-    };
-    
-    
-
-    displayperson(person1);
 
 
-  
+function triple(element, index, array){
+
+    array[index] = element * 3;
+
+}
+
+
+
+function square(element, index, array){
+
+    array[index] = Math.pow(element, 2);
+
+}
+
+
+
+function cube(element, index, array){
+
+    array[index] = Math.pow(element, 3);
+
+}
+
+
+
+function display(element){
+
+    console.log(element);
+
+}
+
+
+
+// -------------- EXAMPLE 2 --------------
+
+
+
+let fruits = ["apple", "orange", "banana", "coconut"];
+
+
+
+fruits.forEach(capitalize);
+
+fruits.forEach(display);
+
+
+
+function upperCase(element, index, array){
+
+    array[index] = element.toUpperCase();
+
+}
+
+
+
+function lowercase(element, index, array){
+
+    array[index] = element.toLowerCase();
+
+}
+
+
+
+function capitalize(element, index, array){
+
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+
+}
+
+
+
+/*
+
+function display(element){
+
+    console.log(element);
+
+}
+
+*/
