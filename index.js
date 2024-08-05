@@ -83,20 +83,48 @@
 
 */
 
+let people = [{
 
-//filter method
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    name : "sam",
+    age : 22
 
-let evenNumbs = numbers.filter(isEven);
 
-console.log(evenNumbs);
+},
 
-function isEven(element){
-    console.log({index : element, status : (element % 2 === 0)});
-    return element % 2 === 0;
+{
+    name : "john",
+    age : 25
+},
+
+{
+    name : "jane",
+    age : 14
+
+},
+{
+    name : "jeff" , 
+    age : 13
 
 }
 
 
 
+]
 
+
+
+
+function grantaccess(people){
+    
+    return people.age > 18 ? true : false;
+
+}
+
+
+function denyaccess(people){
+    console.log( {name : people.name , age : people.age ,  status : ((people.age < 18) ? true : false)})
+    return people.age < 18 ? true : false;
+
+}
+
+console.log(people.filter(denyaccess));
