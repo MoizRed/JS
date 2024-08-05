@@ -36,7 +36,7 @@
 35 REDUCE METHOD DONE! 
 36 FUNCTION DECLARATIONS DONE! as variable , as a higher order function , in closures , event listeners
 37 ARROW FUNCTIONS DONE! good for simple fucntion
-38 OBJECTS DONE!
+38 OBJECTS DONE! they have properties and methods
 39 THIS DONE ! this refers to the object you currently work with.
 40
 41
@@ -82,24 +82,27 @@
 
 
 */
+//constructor is easy com on
 
 
-const person = {
+const brand = document.getElementById("brand")
+const model = document.getElementById("model")
+const year = document.getElementById("year")
+const color = document.getElementById("color")
+const button = document.getElementById("but")
+function car(make , model , year , color){
+    this.make = make,
+    this.model = model,
+    this.color = year ,
+    this.year = color 
 
-
-    name : "john",  //property of an object 
-    age : 30,
-    height : 5.7,
-    isMarried : false,
-    children : ["sarah","jane","josh"],
-
-    greet : function(greeted){    //Method
-        console.log(`hello ${greeted}`);
-    },
-    kick : (person) => {    //method 
-        console.log(this.name + "kicking " + person);
-    }
 }
 
 
-console.log(person.kick("jane"))
+const car1 = new car("honda" ,"civic" , 2020 , "white") //new to construct a new object from car constuctor
+const car2 = new car("chevy" ,"camaro" , 2021 , "black")
+const car3 = new car("ford" ,"mustang" , 2022 , "red")
+console.log(car1)
+console.log(car2)
+console.log(car3)
+
