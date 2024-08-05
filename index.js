@@ -31,7 +31,7 @@
 30 RANDOM PASSWORD GENERATOR DONE!
 31 CALLS BACKS DONE!
 32 FOREACH DONE!
-33
+33 MAP METHOD 
 34
 35
 36
@@ -80,136 +80,107 @@
 79
 80
 
-*/
+Pinned by Bro Code
+@BroCodez
+9 months ago
+// .map() = accepts a callback and applies that function 
 
-// forEach() = method used to iterate over the elements 
-
-//                     of an array and apply a specified function (callback)
-
-//                     to each element
-
-
-
-//                     array.forEach(callback)
-
-//                     element, index, array are provided
+//                 to each element of an array, then return a new array
 
 
 
-
-
-// forEach() = method used to iterate over the elements 
-
-//                     of an array and apply a specified function (callback)
-
-//                     to each element
-
-
-
-//                     array.forEach(callback)
-
-//                     element, index, array are provided
-
-
-
-// -------------- EXAMPLE 1 --------------
-
-
+// ------------ EXAMPLE 1 ------------
 
 const numbers = [1, 2, 3, 4, 5];
 
+const squared = numbers.map(square);
 
-
-numbers.forEach(cube);
-
-numbers.forEach(display);
-
-
-
-function double(element, index, array){
-
-    array[index] = element * 2;
-
-}
+const cubed = numbers.map(cube);
 
 
 
-function triple(element, index, array){
+console.log(cubed);
 
-    array[index] = element * 3;
+
+
+function square(element){
+
+    return Math.pow(element, 2);
 
 }
 
 
 
-function square(element, index, array){
+function cube(element){
 
-    array[index] = Math.pow(element, 2);
-
-}
-
-
-
-function cube(element, index, array){
-
-    array[index] = Math.pow(element, 3);
+    return Math.pow(element, 3);
 
 }
 
 
 
-function display(element){
+// ------------ EXAMPLE 2 ------------
 
-    console.log(element);
+const students = ["Spongebob", "Patrick", "Squidward", "Sandy"];
 
-}
+const studentsUpper = students.map(upperCase);
 
-
-
-// -------------- EXAMPLE 2 --------------
+const studentsLower = students.map(lowerCase);
 
 
 
-let fruits = ["apple", "orange", "banana", "coconut"];
+console.log(studentsLower);
 
 
 
-fruits.forEach(capitalize);
+function upperCase(element){
 
-fruits.forEach(display);
-
-
-
-function upperCase(element, index, array){
-
-    array[index] = element.toUpperCase();
+    return element.toUpperCase();
 
 }
 
 
 
-function lowercase(element, index, array){
+function lowerCase(element){
 
-    array[index] = element.toLowerCase();
-
-}
-
-
-
-function capitalize(element, index, array){
-
-    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+    return element.toLowerCase();
 
 }
 
 
 
-/*
+// ------------ EXAMPLE 3 ------------
 
-function display(element){
+const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
 
-    console.log(element);
+const formattedDates = dates.map(formatDates);
 
-}
 
+
+console.log(formattedDates);
+
+
+
+function formatDates(element){
+
+    const parts = element.split("-");
+
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+
+} 
 */
+
+
+
+const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+
+
+function formatDates(element){
+
+    const parts = element.split("-")
+
+    return `${parts[1]}/${parts[2]}/${parts[0]}`
+
+}
+
+console.log(dates.map(formatDates))
