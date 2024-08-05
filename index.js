@@ -115,7 +115,7 @@ let people = [{
 
 
 function grantaccess(people){
-    
+    console.log( {name : people.name , age : people.age ,  status : ((people.age > 18) ? true : false)})
     return people.age > 18 ? true : false;
 
 }
@@ -127,4 +127,4 @@ function denyaccess(people){
 
 }
 
-console.log(people.filter(denyaccess));
+console.log(people.filter(grantaccess));
