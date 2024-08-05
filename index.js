@@ -34,9 +34,9 @@
 33 MAP METHOD DONE! returns array with function applied
 34 FILTER METHOD DONE! returns array with function applied
 35 REDUCE METHOD DONE! 
-36 FUNCTION DECLARATIONS DONE!
-37
-38
+36 FUNCTION DECLARATIONS DONE! as variable , as a higher order function , in closures , event listeners
+37 ARROW FUNCTIONS DONE! good for simple fucntion
+38 OBJECTS DONE!
 39 THIS DONE ! this refers to the object you currently work with.
 40
 41
@@ -84,30 +84,22 @@
 */
 
 
-
-//accumulator : current element , element is the next element
-const groceries = [3,289,484,2]
-
-amount = groceries.reduce(sum)
-
-console.log(amount)
+const person = {
 
 
-function sum(accumulator,  element)
-{
+    name : "john",  //property of an object 
+    age : 30,
+    height : 5.7,
+    isMarried : false,
+    children : ["sarah","jane","josh"],
 
-
-    return accumulator + element
-
+    greet : function(greeted){    //Method
+        console.log(`hello ${greeted}`);
+    },
+    kick : (person) => {    //method 
+        console.log(this.name + "kicking " + person);
+    }
 }
 
 
-
-
-function getmax(accumulator, ELEMENT){
-
-
-    return Math.max(accumulator , ELEMENT)
-
-}
-
+console.log(person.kick("jane"))
