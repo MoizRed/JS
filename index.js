@@ -85,13 +85,11 @@
 //constructor is easy com on
 
 
-const brand = document.getElementById("brand")
-const model = document.getElementById("model")
-const year = document.getElementById("year")
-const color = document.getElementById("color")
-const button = document.getElementById("but")
-function car(make , model , year , color){
-    this.make = make,
+
+
+
+function car(brand , model , year , color){
+    this.brand = brand,
     this.model = model,
     this.color = year ,
     this.year = color 
