@@ -31,7 +31,7 @@
 30 RANDOM PASSWORD GENERATOR DONE!
 31 CALLS BACKS DONE!
 32 FOREACH DONE!
-33 MAP METHOD 
+33 MAP METHOD DONE!
 34
 35
 36
@@ -80,107 +80,23 @@
 79
 80
 
-Pinned by Bro Code
-@BroCodez
-9 months ago
-// .map() = accepts a callback and applies that function 
 
-//                 to each element of an array, then return a new array
-
-
-
-// ------------ EXAMPLE 1 ------------
-
-const numbers = [1, 2, 3, 4, 5];
-
-const squared = numbers.map(square);
-
-const cubed = numbers.map(cube);
-
-
-
-console.log(cubed);
-
-
-
-function square(element){
-
-    return Math.pow(element, 2);
-
-}
-
-
-
-function cube(element){
-
-    return Math.pow(element, 3);
-
-}
-
-
-
-// ------------ EXAMPLE 2 ------------
-
-const students = ["Spongebob", "Patrick", "Squidward", "Sandy"];
-
-const studentsUpper = students.map(upperCase);
-
-const studentsLower = students.map(lowerCase);
-
-
-
-console.log(studentsLower);
-
-
-
-function upperCase(element){
-
-    return element.toUpperCase();
-
-}
-
-
-
-function lowerCase(element){
-
-    return element.toLowerCase();
-
-}
-
-
-
-// ------------ EXAMPLE 3 ------------
-
-const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
-
-const formattedDates = dates.map(formatDates);
-
-
-
-console.log(formattedDates);
-
-
-
-function formatDates(element){
-
-    const parts = element.split("-");
-
-    return `${parts[1]}/${parts[2]}/${parts[0]}`;
-
-} 
 */
 
 
+//filter method
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+let evenNumbs = numbers.filter(isEven);
 
+console.log(evenNumbs);
 
-function formatDates(element){
-
-    const parts = element.split("-")
-
-    return `${parts[1]}/${parts[2]}/${parts[0]}`
+function isEven(element){
+    console.log({index : element, status : (element % 2 === 0)});
+    return element % 2 === 0;
 
 }
 
-console.log(dates.map(formatDates))
+
+
+
