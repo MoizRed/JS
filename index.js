@@ -30,14 +30,14 @@
 29 // you can select index of string by doing text[index] exp : text = "hello" text[3] = l
 30 RANDOM PASSWORD GENERATOR DONE!
 31 CALLS BACKS DONE!
-32 FOREACH DONE!
-33 MAP METHOD DONE!
-34
-35
-36
+32 FOREACH DONE! applies function to each iteration of array 
+33 MAP METHOD DONE! returns array with function applied
+34 FILTER METHOD DONE! returns array with function applied
+35 REDUCE METHOD DONE! 
+36 FUNCTION DECLARATIONS DONE!
 37
 38
-39 THIS DONE !
+39 THIS DONE ! this refers to the object you currently work with.
 40
 41
 42
@@ -83,48 +83,31 @@
 
 */
 
-let people = [{
-
-    name : "sam",
-    age : 22
 
 
-},
+//accumulator : current element , element is the next element
+const groceries = [3,289,484,2]
 
+amount = groceries.reduce(sum)
+
+console.log(amount)
+
+
+function sum(accumulator,  element)
 {
-    name : "john",
-    age : 25
-},
 
-{
-    name : "jane",
-    age : 14
 
-},
-{
-    name : "jeff" , 
-    age : 13
+    return accumulator + element
 
 }
 
 
 
-]
+
+function getmax(accumulator, ELEMENT){
 
 
-
-
-function grantaccess(people){
-    console.log( {name : people.name , age : people.age ,  status : ((people.age > 18) ? true : false)})
-    return people.age > 18 ? true : false;
+    return Math.max(accumulator , ELEMENT)
 
 }
 
-
-function denyaccess(people){
-    console.log( {name : people.name , age : people.age ,  status : ((people.age < 18) ? true : false)})
-    return people.age < 18 ? true : false;
-
-}
-
-console.log(people.filter(grantaccess));
