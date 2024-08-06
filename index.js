@@ -39,8 +39,8 @@
 38 OBJECTS DONE! they have properties and methods
 39 THIS DONE ! this refers to the object you currently work with.
 40 CLASSES DONE!
-41
-42
+41 STATIC DONE! the static keyword is used to define properties that are shared by all instances of a class , it only belongs to the class . DONE!
+42 
 43
 44
 45
@@ -106,7 +106,8 @@ class fruit{
     calculate(){console.log(`The Total of the groceries is $${this.price * this.quantity}`)}
 
     taxes(){console.log("the tax for this item is $" + (((this.price * 100)/20)))}
-    
+
+    static TAX = 20
 }
 
 
@@ -115,6 +116,7 @@ class fruit{
 const fruit1 = new fruit("Banana", "yellow" , 30 , 3)
 const fruit2 = new fruit("apple" , 'green' , 50 , 10)
 
+console.log(fruit1.TAX)
 
 fruit1.diplay()
 fruit1.calculate()
