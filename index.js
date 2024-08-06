@@ -38,7 +38,7 @@
 37 ARROW FUNCTIONS DONE! good for simple fucntion
 38 OBJECTS DONE! they have properties and methods
 39 THIS DONE ! this refers to the object you currently work with.
-40
+40 CLASSES DONE!
 41
 42
 43
@@ -82,25 +82,44 @@
 
 
 */
-//constructor is easy com on
 
 
+//classes 
+//inside class we dont need function keyword
+class fruit{
+    constructor(name , color , price , quantity){
+
+        this.name = name,
+        this.color = color,
+        this.price = price, 
+        this.quantity = quantity
+
+    }
+
+    diplay(){
+
+        console.log(`the name of the selected fruit is ${this.name}, The color is ${this.color} , the quantity is ${this.quantity}, the Price is $${this.price} ,`)
 
 
+    }
 
-function car(brand , model , year , color){
-    this.brand = brand,
-    this.model = model,
-    this.color = year ,
-    this.year = color 
+    calculate(){console.log(`The Total of the groceries is $${this.price * this.quantity}`)}
 
+    taxes(){console.log("the tax for this item is $" + (((this.price * 100)/20)))}
+    
 }
 
 
-const car1 = new car("honda" ,"civic" , 2020 , "white") //new to construct a new object from car constuctor
-const car2 = new car("chevy" ,"camaro" , 2021 , "black")
-const car3 = new car("ford" ,"mustang" , 2022 , "red")
-console.log(car1)
-console.log(car2)
-console.log(car3)
 
+
+const fruit1 = new fruit("Banana", "yellow" , 30 , 3)
+const fruit2 = new fruit("apple" , 'green' , 50 , 10)
+
+
+fruit1.diplay()
+fruit1.calculate()
+fruit1.taxes()
+
+fruit2.diplay()
+fruit2.calculate()
+fruit2.taxes()
