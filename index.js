@@ -85,55 +85,29 @@
 
 
 
-class Human{
-    constructor(name , age , hobbies , address){
-        this.name = name;
-        this.age = age ;
-        this.hobbies = hobbies;
-        this.address =  address;
-
+class Address{
+    constructor(country , state , city){
+        this.country = country
+        this.state = state
+        this.city = city
     }
 
-    sayhi() {
 
-         console.log(` hello my name is  ${this.name}, im ${this.age} , i live in ${this.address}, i love ${this.hobbies}`)
 
-        return 
+}
+
+
+class person  {
+    constructor(name, age ,...rest){ //rest parameter to get all params of adress and pass them 
+        this.name = name ;
+        this.age =age; 
+        this.address = new Address(...rest) //nested object but its being created here with rest parameter to take them as input (EAAAAAAAAAASY)
     }
 
 
 }
 
 
-const human1 = new Human("khjor", 23 , "gaming" , "nepal")
+const person1 = new person("jeff" , 23 , "algeria" , "skikda" , "kami")
 
-console.log(human1.sayhi())
-
-
-const person ={
-
-    FullName : "sulaiman khan",
-    age : 21,
-    isStudent : true,
-    hobbies : ["gaming","sleeping","coding"],
-    address : {
-
-        city : "karachi",
-        country : "pakistan"
-
-
-    }
-
-}
-
-
-console.log(person.address.city)
-console.log(person.hobbies[2])
-
-
-console.log(person)
-
-//why the output of the console says undefined whenever i call console.log(human1.sayhi()) ?
-
-//correct way to use class method
-console.log(human1.sayhi.call(human1));
+console.log(person1.address.country) 
