@@ -46,7 +46,7 @@
 45
 46 OBJECTS/ARRAY FUNCTION DESTRUCTURING DONE! They allow us to extract a value from an array or object and use them in any new variable.. like you want to use the value in a new variable of a product
 47 NESTED OBJECTS DONE!
-48
+48 OBJECT ARRAY DONE!
 49
 50
 51
@@ -83,31 +83,28 @@
 
 */
 
+//EAAAAAAAAAAAAAAAAAAASYY WORKING WITH ARRAY OF OBJECT
+
+//array of object is easy..
+const fruits = [{name : "apple" , color : "red" , calories : 95},
+                {name : "banana " , color : "red" , calories : 105},
+                {name : "coconut" , color : "white" , calories : 495}]
 
 
-class Address{
-    constructor(country , state , city){
-        this.country = country
-        this.state = state
-        this.city = city
+/*let nam = [];
+    for (i in fruits){
+             nam[i] =  fruits[i].name //same as map(with no change)
+             console.log(fruits[i].name); //same as foreach 
+            
     }
+             console.log(nam)
+*/
 
 
 
-}
+
+// instead 
 
 
-class person  {
-    constructor(name, age ,...rest){ //rest parameter to get all params of adress and pass them 
-        this.name = name ;
-        this.age =age; 
-        this.address = new Address(...rest) //nested object but its being created here with rest parameter to take them as input (EAAAAAAAAAASY)
-    }
-
-
-}
-
-
-const person1 = new person("jeff" , 23 , "algeria" , "skikda" , "kami")
-
-console.log(person1.address.country) 
+fruitnames = fruits.map( (fruit) => {return {...fruit , price : 39}}) //output : [{name : "apple" , color : "red" , calories : 95 , price : 39},{name : "banana " , color : "red" , calories : 105 , price : 39},{name : "coconut" , color : "white" , calories : 495 , price : 39}]
+console.log(fruitnames)
