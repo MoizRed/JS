@@ -42,10 +42,10 @@
 41 STATIC DONE! the static keyword is used to define properties that are shared by all instances of a class , it only belongs to the class . DONE!
 42 INheritance DONE! use extends keyword to create a child class from parent class 
 43 SUPER KEYWORD DONE! key word is used tin classes to  to call the constructor or access the properties and methods of a parent (superclass)  super = the parent
-44
+44  GETTERS AND SETTERS DONE! they allow you to contorol how your object's properties are accessed , or how they are modified , to have a private property . __name ,_weight [NOT STUDIED VERY WEL]
 45
-46 OBJECTS ARRAY FUNCTION DESTRUCTURING DONE!
-47
+46 OBJECTS/ARRAY FUNCTION DESTRUCTURING DONE! They allow us to extract a value from an array or object and use them in any new variable.. like you want to use the value in a new variable of a product
+47 NESTED OBJECTS DONE!
 48
 49
 50
@@ -85,93 +85,55 @@
 
 
 
-
-class Animal{
-
-    canRun = true;
-
-    constructor(name , age ,speed){ 
-    this.name = name;
-    this.age = age
-    this.speed = speed;
-
+class Human{
+    constructor(name , age , hobbies , address){
+        this.name = name;
+        this.age = age ;
+        this.hobbies = hobbies;
+        this.address =  address;
 
     }
 
+    sayhi() {
 
-    speedinfo(speed){
+         console.log(` hello my name is  ${this.name}, im ${this.age} , i live in ${this.address}, i love ${this.hobbies}`)
 
-        console.log(`${this.name} is running at ${speed} km/h`);
-
+        return 
     }
-
-
 
 
 }
 
 
+const human1 = new Human("khjor", 23 , "gaming" , "nepal")
+
+console.log(human1.sayhi())
 
 
-//we create a child of the animal class
+const person ={
+
+    FullName : "sulaiman khan",
+    age : 21,
+    isStudent : true,
+    hobbies : ["gaming","sleeping","coding"],
+    address : {
+
+        city : "karachi",
+        country : "pakistan"
 
 
-
-class Rabbit extends Animal{
-
-    canRun = true;
-    constructor(name , age , speed , type , tailsize){
-        super(name,age,speed)     //parent params to not repeat our selves (DRY)
-        this.type = type  
-        this.tailsize = tailsize  //special params for the child class
-        
     }
 
-    info(){
-
-        console.log (
-            `this ${this.name}`, 
-            this.canRun ? "can run" : "cannot run",
-            `, its ${this.age}`,
-            `defined as type of ${this.type} `,
-            `it has ${this.tailsize}`
-        
-        )
-        super.speedinfo(this.speed)
-    }
-    
-}
-
-class fish extends Animal{
-    canRun = false;
-    constructor(name , age , speed ,type , eyesize){
-        super(name, age, speed)
-        this.type = type;
-        this.eyesize = eyesize;
-    }
-
-    info(){
-        
-        console.log (
-            `this ${this.name}`, 
-            this.canRun ? "can run" : "cannot run",
-            `, its ${this.age}`,
-            `defined as type of ${this.type} `,
-            `it has ${this.eyesize}`
-        
-        )
-        super.speedinfo(this.speed)
-    }
-    
 }
 
 
-
-const fish1 = new fish("fishy", 12, 30 , "jelly Fish" , "WIDE EYES")
-const fish2 = new fish("fisho", 30 , 20 , "buffer Fish" , "no EYES")
-const rabbit1 = new Rabbit("Bugs", 30 , 100 , "Jackrabbit" , "small eyes")
+console.log(person.address.city)
+console.log(person.hobbies[2])
 
 
-console.log(fish1.info())
-console.log(fish2.info())
-console.log(rabbit1.info())
+console.log(person)
+
+//why the output of the console says undefined whenever i call console.log(human1.sayhi()) ?
+
+//correct way to use class method
+console.log(human1.sayhi.call(human1));
