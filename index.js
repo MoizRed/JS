@@ -40,7 +40,7 @@
 39 THIS DONE ! this refers to the object you currently work with.
 40 CLASSES DONE!
 41 STATIC DONE! the static keyword is used to define properties that are shared by all instances of a class , it only belongs to the class . DONE!
-42 
+42 INheritance DONE! use extends keyword to create a child class from parent class 
 43
 44
 45
@@ -84,44 +84,56 @@
 */
 
 
-//classes 
-//inside class we dont need function keyword
-class fruit{
-    constructor(name , color , price , quantity){
-
-        this.name = name,
-        this.color = color,
-        this.price = price, 
-        this.quantity = quantity
-
-    }
-
-    diplay(){
-
-        console.log(`the name of the selected fruit is ${this.name}, The color is ${this.color} , the quantity is ${this.quantity}, the Price is $${this.price} ,`)
 
 
-    }
 
-    calculate(){console.log(`The Total of the groceries is $${this.price * this.quantity}`)}
+class Animal{
 
-    taxes(){console.log("the tax for this item is $" + (((this.price * 100)/20)))}
 
-    static TAX = 20
+   alive = true; 
+
+
+   eat(){
+
+    console.log(`this ${this.name } is eating`)
+
+
+
+   }
+   sleep(){
+    console.log(`this ${this.name} is sleeping`)
+   }
+
 }
 
 
+class Rabbit extends Animal{
+
+    name = "rabbit"
+    run(){
+    console.log(`this ${this.name} is running`)
+    }
+
+}
 
 
-const fruit1 = new fruit("Banana", "yellow" , 30 , 3)
-const fruit2 = new fruit("apple" , 'green' , 50 , 10)
+class Fish extends Animal{
+    name = "fish"
+    swim(){
+    console.log(`this ${this.name} is swiming`)
+    }
 
-console.log(fruit1.TAX)
+}
 
-fruit1.diplay()
-fruit1.calculate()
-fruit1.taxes()
 
-fruit2.diplay()
-fruit2.calculate()
-fruit2.taxes()
+class Hawk extends Animal{
+    name = "hawk"
+    fly(){
+    console.log(`this ${this.name} is flying`)
+    }
+}
+
+const rabbit = new Rabbit();
+
+
+console.log(Rabbit)
