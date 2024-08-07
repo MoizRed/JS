@@ -117,7 +117,6 @@ class Animal{
 
 
 
-
 class Rabbit extends Animal{
 
     canRun = true;
@@ -169,8 +168,10 @@ class fish extends Animal{
 
 
 const fish1 = new fish("fishy", 12, 30 , "jelly Fish" , "WIDE EYES")
+const fish2 = new fish("fisho", 30 , 20 , "buffer Fish" , "no EYES")
 const rabbit1 = new Rabbit("Bugs", 30 , 100 , "Jackrabbit" , "small eyes")
 
 
 console.log(fish1.info())
+console.log(fish2.info())
 console.log(rabbit1.info())
