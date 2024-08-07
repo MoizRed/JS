@@ -41,7 +41,7 @@
 40 CLASSES DONE!
 41 STATIC DONE! the static keyword is used to define properties that are shared by all instances of a class , it only belongs to the class . DONE!
 42 INheritance DONE! use extends keyword to create a child class from parent class 
-43
+43 SUPER KEYWORD DONE! key word is used tin classes to  to call the constructor or access the properties and methods of a parent (superclass)  super = the parent
 44
 45
 46 OBJECTS ARRAY FUNCTION DESTRUCTURING DONE!
@@ -86,54 +86,91 @@
 
 
 
-
 class Animal{
 
+    canRun = true;
 
-   alive = true; 
-
-
-   eat(){
-
-    console.log(`this ${this.name } is eating`)
-
+    constructor(name , age ,speed){ 
+    this.name = name;
+    this.age = age
+    this.speed = speed;
 
 
-   }
-   sleep(){
-    console.log(`this ${this.name} is sleeping`)
-   }
+    }
+
+
+    speedinfo(speed){
+
+        console.log(`${this.name} is running at ${speed} km/h`);
+
+    }
+
+
+
 
 }
+
+
+
+
+//we create a child of the animal class
+
+
 
 
 class Rabbit extends Animal{
 
-    name = "rabbit"
-    run(){
-    console.log(`this ${this.name} is running`)
+    canRun = true;
+    constructor(name , age , speed , type , tailsize){
+        super(name,age,speed)     //parent params to not repeat our selves (DRY)
+        this.type = type  
+        this.tailsize = tailsize  //special params for the child class
+        
     }
 
+    info(){
+
+        console.log (
+            `this ${this.name}`, 
+            this.canRun ? "can run" : "cannot run",
+            `, its ${this.age}`,
+            `defined as type of ${this.type} `,
+            `it has ${this.tailsize}`
+        
+        )
+        super.speedinfo(this.speed)
+    }
+    
+}
+
+class fish extends Animal{
+    canRun = false;
+    constructor(name , age , speed ,type , eyesize){
+        super(name, age, speed)
+        this.type = type;
+        this.eyesize = eyesize;
+    }
+
+    info(){
+        
+        console.log (
+            `this ${this.name}`, 
+            this.canRun ? "can run" : "cannot run",
+            `, its ${this.age}`,
+            `defined as type of ${this.type} `,
+            `it has ${this.eyesize}`
+        
+        )
+        super.speedinfo(this.speed)
+    }
+    
 }
 
 
-class Fish extends Animal{
-    name = "fish"
-    swim(){
-    console.log(`this ${this.name} is swiming`)
-    }
 
-}
+const fish1 = new fish("fishy", 12, 30 , "jelly Fish" , "WIDE EYES")
+const rabbit1 = new Rabbit("Bugs", 30 , 100 , "Jackrabbit" , "small eyes")
 
 
-class Hawk extends Animal{
-    name = "hawk"
-    fly(){
-    console.log(`this ${this.name} is flying`)
-    }
-}
-
-const rabbit = new Rabbit();
-
-
-console.log(Rabbit)
+console.log(fish1.info())
+console.log(rabbit1.info())
