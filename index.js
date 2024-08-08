@@ -47,58 +47,48 @@
 46 OBJECTS/ARRAY FUNCTION DESTRUCTURING DONE! They allow us to extract a value from an array or object and use them in any new variable.. like you want to use the value in a new variable of a product
 47 NESTED OBJECTS DONE!
 48 OBJECT ARRAY DONE!
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
+49 Sort DONE!
+50 SHUFFLE DONE!
+51 DATE OBJECT DONE!
+52 TIME OBJECT DONE! console.time("time") [FUNCTION OR CODE ] console.timeEnd("time") allow us to measure time taken for fucntion to finsih , easy.
 59 JS MODULES DONE!
 60 ASYNCHRONOUS JS DONE!
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
 74 CALLBACK HELL DONE! [reminder : function to reference it and function() to evoke]
 75 PROMISES  DONE! (understood 50:50)
-76 ASYNC/AWAIT ! (understood better than PROMISES)
-77
-78
-79
-80
+76 ASYNC/AWAIT ! (understood better than PROMISES
+
+LEFT(IMPORTANT) : 
+
+52 : CLOSURE (repeat it again)
+61 : ERROR HANDLING
+64 : ELEMENT SELECTORS
+77 : JSON
+78 : COOKIES
+79 : FETCH
+55 : FORMAT CURRENCIES
+
+LATER(DOM) :
+63 : DOM
+65 : DOM Navigation
+66 : ADD CHANGE HTML USING JS
+67 : MOUSE EVENETS
+68 : KEY EVENTS
+69 : HIDE AND SHOW HTML USING JS
+70 : NODELISTS
+81 : CLASSLIST
+
+
+PROJECTS(JS) : 
+56 : JS COMPUND INTRESET CALCULATOR
+57 : JS DIGITAL CLOCK
+58 : STOP WATCH
+72 : ROCK PAPER SCISSORS
+73 : IMAGE SLIDER
+80 : JAVASCRIPT WHETHER APP
 
 
 */
 import { Log } from "./log.js";
 
 
-Log("hello" , 0 , 0 , 399) //test
-
-
-
-const people = [{
-    name : "john",
-    age : 30  } , {
-
-    name : "jane",
-    age : 25    
-    },{
-    name : "bob",
-    age : 40
-    }]
-
-
-Log(people.sort((a,b)=>a.age - b.age))
+Log("hello world")
