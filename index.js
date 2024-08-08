@@ -57,7 +57,7 @@
 56
 57
 58
-59
+59 JS MODULES DONE!
 60 ASYNCHRONOUS JS DONE!
 61
 62
@@ -82,29 +82,23 @@
 
 
 */
-
-//EAAAAAAAAAAAAAAAAAAASYY WORKING WITH ARRAY OF OBJECT
-
-//array of object is easy..
-const fruits = [{name : "apple" , color : "red" , calories : 95},
-                {name : "banana " , color : "red" , calories : 105},
-                {name : "coconut" , color : "white" , calories : 495}]
+import { Log } from "./log.js";
 
 
-/*let nam = [];
-    for (i in fruits){
-             nam[i] =  fruits[i].name //same as map(with no change)
-             console.log(fruits[i].name); //same as foreach 
-            
-    }
-             console.log(nam)
-*/
+Log("hello" , 0 , 0 , 399) //test
 
 
 
+const people = [{
+    name : "john",
+    age : 30  } , {
 
-// instead 
+    name : "jane",
+    age : 25    
+    },{
+    name : "bob",
+    age : 40
+    }]
 
 
-fruitnames = fruits.map( (fruit) => {return {...fruit , price : 39}}) //output : [{name : "apple" , color : "red" , calories : 95 , price : 39},{name : "banana " , color : "red" , calories : 105 , price : 39},{name : "coconut" , color : "white" , calories : 495 , price : 39}]
-console.log(fruitnames)
+Log(people.sort((a,b)=>a.age - b.age))
