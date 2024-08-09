@@ -43,7 +43,6 @@
 42 INheritance DONE! use extends keyword to create a child class from parent class 
 43 SUPER KEYWORD DONE! key word is used tin classes to  to call the constructor or access the properties and methods of a parent (superclass)  super = the parent
 44  GETTERS AND SETTERS DONE! they allow you to contorol how your object's properties are accessed , or how they are modified , to have a private property . __name ,_weight [NOT STUDIED VERY WEL]
-45
 46 OBJECTS/ARRAY FUNCTION DESTRUCTURING DONE! They allow us to extract a value from an array or object and use them in any new variable.. like you want to use the value in a new variable of a product
 47 NESTED OBJECTS DONE!
 48 OBJECT ARRAY DONE!
@@ -59,24 +58,26 @@
 
 LEFT(IMPORTANT) : 
 
-52 : CLOSURE (repeat it again) DONE!
-61 : ERROR HANDLING 
-64 : ELEMENT SELECTORS
-77 : JSON
+52 : CLOSURE (repeat it again) DONE! allows us to have  private variable for a function
+61 : ERROR HANDLING      DONE! TRY code CATCH error FINNALY excutes regardless of error
+63 : DOM                 DONE ! Document object module
+65 : DOM Navigation      DONE ! process of navigating through DOM
+64 : ELEMENT SELECTORS    DONE !    ! DOM elements selector , like css style , html tags and modify them with JS.
+66 : ADD CHANGE HTML USING JS DONE !  !  add and change html using JS
+
+
+
+77 : JSON         two methods , parse and stringify , parse makes a string into an object , this is useful to read json data from a file and make it an object to work with inside the code, stringify makes an object into a string , it is a text format . stringfy turns a json object into a string is it useful to safe json data in json format .
 78 : COOKIES
 79 : FETCH
-55 : FORMAT CURRENCIES
+82 : FILE HANDLING WITH NODE
 
 LATER(DOM) :
-63 : DOM
-65 : DOM Navigation
-66 : ADD CHANGE HTML USING JS
 67 : MOUSE EVENETS
 68 : KEY EVENTS
-69 : HIDE AND SHOW HTML USING JS
 70 : NODELISTS
 81 : CLASSLIST
-
+55 : FORMAT CURRENCIES
 
 PROJECTS(JS) : 
 56 : JS COMPUND INTRESET CALCULATOR
@@ -89,67 +90,22 @@ PROJECTS(JS) :
 
 */
 
-//CLOSURE IS IMPORTANT  : a fucntion defined inside of antoher fucntion the inner fucntion has access to the variables and scope of the out function and allow fo r private viariables and state maintenance
 
-
-
-
-// Error = An Object that is created to represent a problem that occurs
-
-//              Occur often with user input or establishing a connection
-
-
-
-// try { } = Encloses code that might potentially cause an error
-
-// catch { } = Catch and handle any thrown Errors from try { }
-
-// finally { } = (optional) Always executes. Used mostly for clean up
-
-//                    ex. close files, close connections, release resources
-
-
-
-try{
-
-    const dividend = Number(window.prompt("Enter a dividend: "));
-
-    const divisor = Number(window.prompt("Enter a divisor: "));
-
-    
-
-    if(divisor == 0){
-
-        throw new Error("You can't divide by zero!");
-
-    }
-
-    if(isNaN(dividend) || isNaN(divisor)){
-
-        throw new Error("Values must be a number");
-
+const person1  = 
+    {
+        "name": "Rebecca",
+        "age": 26,
+        "hobbie": "hiking",
+        "job": "teacher",
+        "isMarried": true
     }
 
 
+const namesObject = ["jeff","jean","oliver","kevin"]
+const namesString = `["jeff","jean","oliver","kevin"]`
 
-    const result = dividend / divisor;
-
-    console.log(result);
-
-}
-
-catch(error){
-
-    console.error(error);
-
-}
-
-finally{
-
-    console.log("This always executes");
-
-}
+const toObject = JSON.parse(namesString)
+const toString = JSON.stringify(namesObject)
 
 
-
-console.log("You have reached the end!"); 
+console.log("" , toObject , toString)
