@@ -69,7 +69,7 @@ LEFT(IMPORTANT) :
 
 77 : JSON         two methods , parse and stringify , parse makes a string into an object , this is useful to read json data from a file and make it an object to work with inside the code, stringify makes an object into a string , it is a text format . stringfy turns a json object into a string is it useful to safe json data in json format .
 78 : COOKIES
-79 : FETCH
+79 : FETCH     fetching from file. 
 82 : FILE HANDLING WITH NODE
 
 LATER(DOM) :
@@ -89,23 +89,3 @@ PROJECTS(JS) :
 
 
 */
-
-
-const person1  = 
-    {
-        "name": "Rebecca",
-        "age": 26,
-        "hobbie": "hiking",
-        "job": "teacher",
-        "isMarried": true
-    }
-
-
-const namesObject = ["jeff","jean","oliver","kevin"]
-const namesString = `["jeff","jean","oliver","kevin"]`
-
-const toObject = JSON.parse(namesString)
-const toString = JSON.stringify(namesObject)
-
-
-console.log("" , toObject , toString)
