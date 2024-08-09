@@ -88,7 +88,43 @@ PROJECTS(JS) :
 
 
 */
-import { Log } from "./log.js";
+
+//CLOSURE IS IMPORTANT  : a fucntion defined inside of antoher fucntion the inner fucntion has access to the variables and scope of the out function and allow fo r private viariables and state maintenance
 
 
-Log("hello world")
+
+function makegame(){
+
+let score = 0
+
+
+function increaseScore(points){
+
+    score += points
+    console.log(`score : ${score}`)
+}
+
+
+
+function decreaseScore(points){
+
+    score += points
+    console.log(`score : ${score}`)
+}
+
+function getscore(){
+
+    return score
+
+}
+
+return {increaseScore , decreaseScore , getscore}
+}
+
+const game = makegame()
+
+game.increaseScore(33)
+game.increaseScore(33)
+game.increaseScore(33)
+game.increaseScore(33)
+console.log("score : " + game.getscore())
